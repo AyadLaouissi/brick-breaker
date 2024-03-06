@@ -80,17 +80,6 @@ class BrickBreaker extends FlameGame
       ),
     );
 
-    world.add(
-      Ball(
-        difficultyModifier: difficultyModifier,
-        radius: ballRadius,
-        position: size / 2,
-        velocity: Vector2((rand.nextDouble() - 0.5) * width, height * 0.2)
-            .normalized()
-          ..scale(height / 4),
-      ),
-    );
-
     world.addAll(
       [
         for (var i = 0; i < brickColors.length; i++)
